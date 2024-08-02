@@ -5,6 +5,7 @@ export function App() {
     
   } 
 */
+import PropTypes from 'prop-types'
 
 const newMessage = {
   message: "Hola Mundo",
@@ -16,6 +17,11 @@ const getResult = (a, b) => {
 };
 
 export const FirstApp = ({title, subtitulo}) => {
+
+    if(!title){
+        throw new Error("El title no existe")
+    }
+
   return (
     <>
       <h1>{ title }</h1>
@@ -23,6 +29,14 @@ export const FirstApp = ({title, subtitulo}) => {
     </>
   );
 };
+
+
+FirstApp.propTypes = {
+title: PropTypes.string.isRequired,
+subtitulo: PropTypes.string.isRequired
+}
+
+
 
 /*
 export const HelloWordApp = () => {
