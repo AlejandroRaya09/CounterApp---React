@@ -16,7 +16,7 @@ const getResult = (a, b) => {
   return a + b;
 };
 
-export const FirstApp = ({title, subtitulo}) => {
+export const FirstApp = ({ title = "Titulo Default", subtitulo}) => {
 
     if(!title){
         throw new Error("El title no existe")
@@ -36,6 +36,10 @@ title: PropTypes.string.isRequired,
 subtitulo: PropTypes.string.isRequired
 }
 
+FirstApp.defaultProps = {
+    title: 'No hay Titulo',
+    subtitulo: 'No hay Subtitulo'
+}
 
 
 /*
