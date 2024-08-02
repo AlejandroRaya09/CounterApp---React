@@ -7,16 +7,24 @@ export function App() {
 */
 
 const newMessage = {
-    message: 'Hola Mundo',
-    tittle: 'Alejandro'
+  message: "Hola Mundo",
+  tittle: "Alejandro",
 };
 
-const getResult = (a,b) =>{
-    return a+b;
-}
+const getResult = (a, b) => {
+  return a + b;
+};
 
+export const FirstApp = ({title, subtitulo}) => {
+  return (
+    <>
+      <h1>{ title }</h1>
+      <p>Soy un Subtitulo... { subtitulo } </p>
+    </>
+  );
+};
 
-
+/*
 export const HelloWordApp = () => {
 
   return (
@@ -30,5 +38,4 @@ export const HelloWordApp = () => {
     </>
   );
 };
-
-
+*/
